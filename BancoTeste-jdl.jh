@@ -1,0 +1,27 @@
+entity Autor {
+	nome String,
+    email String
+}
+entity Livro {
+	titulo String
+    descricao String
+    preco BigDecimal
+}
+entity Cliente {
+	razaoSocial String
+    email String
+}
+entity Venda{
+	livro String
+	data LocalDate
+    total String
+}
+relationship OneToMany{
+	Autor{livro} to Livro,
+    Cliente{venda} to Venda
+}
+paginate Autor, Livro, Cliente, Venda with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl

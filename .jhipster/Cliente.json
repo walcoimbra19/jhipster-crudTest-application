@@ -1,0 +1,32 @@
+{
+    "name": "Cliente",
+    "fields": [
+        {
+            "fieldName": "razaoSocial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "venda",
+            "otherEntityRelationshipName": "cliente",
+            "relationshipName": "venda"
+        }
+    ],
+    "changelogDate": "20200504111900",
+    "entityTableName": "cliente",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
